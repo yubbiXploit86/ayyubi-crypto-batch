@@ -20,17 +20,18 @@
 
 ## 🧠 Tentang Project
 **AYYUBI Simple Ransomware** adalah tools Python sederhana untuk **enkripsi & dekripsi semua file**  
-menggunakan **key permanen berbasis passphrase**.
+menggunakan **key permanen**.
 
 ✔ Tidak tergantung session  
 ✔ Aman untuk testing & edukasi
 ✔ Binary‑safe (rb / wb)  
 ✔ Struktur simpel & mudah dipahami  
+## ‼️⚠️ AWAS KEY ASLI HANYA DI SAYA , HUBUNGI SAYA KALO MINTA KEY ASLI WA"+6285606213297"
 
 ---
 
 ## 🔑 Sistem Key
-- **Passphrase:** `212121`
+- **Passphrase:** `****`
 - Passphrase diubah menjadi **Fernet key valid (SHA‑256)**
 - **Key tidak berubah** walau program ditutup / dibuka ulang
 - Enkripsi & dekripsi **SELALU KONSISTEN**
