@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.png" width="220" alt="AYYUBI Logo">
+  <img src="https://j.top4top.io/p_3668bwcl20.png" width="220" alt="AYYUBI Logo">
 </p>
 
 <h1 align="center">🔐 AYYUBI CRYPTO BATCH</h1>
