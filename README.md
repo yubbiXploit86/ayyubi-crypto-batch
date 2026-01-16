@@ -26,7 +26,7 @@ menggunakan **key permanen**.
 ✔ Aman untuk testing & edukasi
 ✔ Binary‑safe (rb / wb)  
 ✔ Struktur simpel & mudah dipahami  
-## ‼️⚠️ AWAS KEY ASLI HANYA DI SAYA , HUBUNGI SAYA KALO MINTA KEY ASLI WA"+6285606213297"
+## 📞 DM me tiktok @krong_rf
 
 ---
 
