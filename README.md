@@ -58,7 +58,10 @@ Karena membaca file sebagai **binary**, semua format didukung:
 ---
 
 ## ▶️ Cara Penggunaan
-Pastikan Python 3 dan library `cryptography` sudah terpasang.
+git clone https://github.com/yubbiXploit86/ayyubi-crypto-batch.git
+cd ayyubi-crypto-batch
+pip install -r requirements.txt
+
 
 ### 🔐 Cara enkripsi dan dekripsi 
 ```bash
