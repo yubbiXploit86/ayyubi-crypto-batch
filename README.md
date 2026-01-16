@@ -59,7 +59,9 @@ Karena membaca file sebagai **binary**, semua format didukung:
 
 ## ▶️ Cara Penggunaan
 git clone https://github.com/yubbiXploit86/ayyubi-crypto-batch.git
+
 cd ayyubi-crypto-batch
+
 pip install -r requirements.txt
 
 
