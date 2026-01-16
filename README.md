@@ -2,10 +2,10 @@
   <img src="https://j.top4top.io/p_3668bwcl20.png" width="220" alt="AYYUBI Logo">
 </p>
 
-<h1 align="center">🔐 AYYUBI CRYPTO BATCH</h1>
+<h1 align="center">🔐 AYYUBI SIMPLE RANSOMWARE </h1>
 
 <p align="center">
-  <b>Simple • Permanent Key • Binary‑Safe</b><br>
+  <b>Simple • Permanent Key </b><br>
   by <b>ayyubi</b>
 </p>
 
@@ -19,11 +19,11 @@
 ---
 
 ## 🧠 Tentang Project
-**AYYUBI Crypto Batch** adalah tools Python sederhana untuk **enkripsi & dekripsi semua file**  
+**AYYUBI Simple Ransomware** adalah tools Python sederhana untuk **enkripsi & dekripsi semua file**  
 menggunakan **key permanen berbasis passphrase**.
 
 ✔ Tidak tergantung session  
-✔ Aman untuk testing & edukasi  
+✔ Aman untuk testing & edukasi
 ✔ Binary‑safe (rb / wb)  
 ✔ Struktur simpel & mudah dipahami  
 
